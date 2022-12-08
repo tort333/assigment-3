@@ -37,7 +37,7 @@ function generatePassword() {
       var charChoices = "";
 
       var ucaracters = confirm("Would you like your password to contain uppercase characters?");
-      if ( === true) {
+      if (ucaracters === true) {
         chooser = true;
         charChoices += passwordcharacthersupper; 
       }
@@ -65,8 +65,8 @@ function generatePassword() {
       } else {
 
       
-        for (i = 1; i < pwdLength ; i++ ) {
-          actualPassword += charChoices[Math.floor(Math.random()*charChoices.length)];
+        for (i = 0; i < pwdLength ; i++ ) {
+          actualPassword += charChoices.charAt[Math.floor(Math.random()*charChoices.length)];
         };
       };
 
