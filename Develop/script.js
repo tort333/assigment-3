@@ -6,6 +6,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  console.log(finalPassword);
   passwordText.value = password;
 
 }
@@ -64,7 +65,6 @@ function generatePassword() {
         alert("At least one choice of lowercase, uppercase, numeric, and/or special characters must be confirmed.");
       } else {
 
-      
         for (i = 0; i < pwdLength ; i++ ) {
           actualPassword += charChoices.charAt[Math.floor(Math.random()*charChoices.length)];
         };
@@ -78,3 +78,11 @@ function generatePassword() {
 
   return actualPassword;
 }
+
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+
+generateBtn.addEventListener("click", writePassword);
